@@ -32,10 +32,10 @@ system_git_clone() {
   printf "${WHITE} 💻 Fazendo download do código whaticket...${GRAY_LIGHT}"
   printf "\n\n"
 
-  sleep 2
+ sleep 2
 
- wget https://vojoo.com.br/vojoooficial/baitazapoficial.zip -O /home/deploy/baitazapoficial.zip -o /dev/null && unzip /home/deploy/baitazapoficial.zip -d /home/deploy/whaticket/
-
+  sudo su - deploy <<EOF
+  git clone https://github.com/12webmarketing/whaticket /home/deploy/whaticket/
 EOF
 
   sleep 2
